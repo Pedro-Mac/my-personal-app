@@ -1,8 +1,12 @@
 import React from 'react';
 import './App.scss';
+
+//components
 import AccountIcon from './components/AccountIcon';
+import Projects from './components/Projects';
 import Stack from './components/Stack';
 import TitleSection from './components/TitleSection';
+import MailForm from './components/MailForm'
 
 function App() {
   return (
@@ -10,6 +14,8 @@ function App() {
       <TitleSection />
       <AccountIcon />
       <Stack />
+      <Projects />
+      <MailForm />
     </div>
   );
 }

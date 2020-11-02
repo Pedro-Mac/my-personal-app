@@ -1,0 +1,26 @@
+@import './../../assets/master';
+
+.form-mail {
+  margin-top: 6rem;
+
+  input {
+    margin-bottom: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid $secondaryColor;
+    background-color: rgba(0, 0, 0, 0);
+    color: $primaryColor;
+  }
+  input:focus {
+    outline: none;
+  }
+
+  textarea {
+    border-radius: 0.25rem;
+    border: 1px solid $secondaryColor;
+    background-color: $primaryColor;
+  }
+
+  textarea:focus {
+    outline: none;
+  }
+}
