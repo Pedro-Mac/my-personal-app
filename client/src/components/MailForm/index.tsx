@@ -20,6 +20,8 @@ const MailForm: React.FC = () => {
         setMessage(()=> e.target.value)
         break;
     }
+
+    
   }
 
   return (
@@ -27,6 +29,7 @@ const MailForm: React.FC = () => {
       <input type="text" name="name" className="w-25" value={name} onChange={handleInputChange}/>
       <input type="email" name="email" className="w-25" value={email} onChange={handleInputChange}/>
       <textarea name="message" value={message} onChange={handleInputChange}></textarea>
+      <button>Send</button>
     </form>
   )
 }
