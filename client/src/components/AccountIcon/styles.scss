@@ -1,0 +1,11 @@
+.container-icons {
+  position: fixed;
+  top: calc((100vh / 2) - (164px / 2));
+  left: 2rem;
+  a {
+    margin-top: 1rem;
+  }
+  a:hover {
+    opacity: 0.85;
+  }
+}

@@ -1,6 +1,7 @@
+@import 'assets/master';
+
 .App {
-  text-align: center;
-  color: #e5e5e5 !important;
+  color: $primaryColor !important;
   max-width: 55rem;
-  margin: auto;
+  margin: 0 auto;
 }

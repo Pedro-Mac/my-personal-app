@@ -1,11 +1,32 @@
+@import '../../assets/master';
+
 section {
-  h1 {
-    font-weight: 700;
-    font-size: 4.5rem;
+  margin-top: 7rem;
+  .container-title {
+    h1 {
+      font-weight: 700;
+      font-size: 4.5rem;
+    }
+
+    h2 {
+      font-weight: 300;
+      font-size: 4.5rem;
+    }
   }
 
-  h2 {
-    font-weight: 300;
-    font-size: 4.5rem;
+  .container-title-handlers {
+    ul {
+      list-style-type: none;
+
+      li {
+        color: $secondaryColor;
+        font-size: 2rem;
+        cursor: pointer;
+      }
+
+      li:hover {
+        opacity: 0.75;
+      }
+    }
   }
 }
