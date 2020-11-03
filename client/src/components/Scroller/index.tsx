@@ -2,7 +2,7 @@ import React from 'react'
 
 import './styles.scss'
 
-const Scroller = () => {
+const Scroller: React.FC = () => {
   return (
     <div className="container-scroller">
       <div className="line-scrolled"></div>
