@@ -23,8 +23,8 @@ const Stack: React.FC = () => {
       </div>
 
       <div className="d-flex justify-content-between pl-0 mt-5">
-        <h3 className="px-4" onClick={()=> handleStackCard(front)}>stack(pedro.frontend);</h3>
-        <h3 className="px-4" onClick={()=> handleStackCard(back)}>stack(pedro.backend);</h3>
+        <h3 className={'px-4' + (stack === front ? ' active' : '')} onClick={()=> handleStackCard(front)}>stack(pedro.frontend);</h3>
+        <h3 className={'px-4' + (stack === back ? ' active' : '')} onClick={()=> handleStackCard(back)}>stack(pedro.backend);</h3>
       </div>
     </section>
   )
