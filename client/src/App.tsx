@@ -7,6 +7,7 @@ import Projects from './components/Projects';
 import Stack from './components/Stack';
 import TitleSection from './components/TitleSection';
 import MailForm from './components/MailForm'
+import Scroller from './components/Scroller';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <Stack />
       <Projects />
       <MailForm />
+      <Scroller />
     </div>
   );
 }

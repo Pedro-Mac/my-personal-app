@@ -1,0 +1,33 @@
+@import './../../assets/master';
+
+$circleRadius: 5px;
+$barLeftDistance: 10%;
+
+.container-scroller {
+  position: fixed;
+  top: 0;
+
+  .line-active {
+    height: 75vh;
+    width: 1px;
+    position: fixed;
+    top: 25vh;
+    left: $barLeftDistance;
+    background: linear-gradient(180deg, $secondaryColor, $baseColor);
+  }
+
+  .circle {
+    height: $circleRadius;
+    width: $circleRadius;
+    position: fixed;
+    top: 25vh;
+    left: calc(#{$barLeftDistance} - 2px);
+    background-color: $secondaryColor;
+    border-radius: 50%;
+  }
+
+  // .line-scrolled{
+  //   content: "";
+  //   position: sticky;
+  // }
+}

@@ -12,6 +12,8 @@
   }
   input:focus {
     outline: none;
+    background-color: $primaryColor;
+    color: $baseColor;
   }
 
   textarea {

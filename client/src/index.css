@@ -15,3 +15,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+#root::after {
+  content: '';
+  width: 1px;
+  display: block;
+  position: absolute;
+  top: 30vh;
+  bottom: 50vh;
+  left: 10%;
+  height: 1300px;
+  background: linear-gradient(
+    to top,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
+  z-index: -1;
+}

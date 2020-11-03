@@ -26,9 +26,9 @@ const MailForm: React.FC = () => {
 
   return (
     <form className="form-mail d-flex flex-column">
-      <input type="text" name="name" className="w-25" value={name} onChange={handleInputChange}/>
-      <input type="email" name="email" className="w-25" value={email} onChange={handleInputChange}/>
-      <textarea name="message" value={message} onChange={handleInputChange}></textarea>
+      <input type="text" name="name" className="w-25 pl-2" value={name} onChange={handleInputChange} placeholder="name"/>
+      <input type="text" name="email" className="w-25 pl-2" value={email} onChange={handleInputChange} placeholder="email"/>
+      <textarea className="pl-2" name="message" value={message} onChange={handleInputChange}></textarea>
       <button>Send</button>
     </form>
   )

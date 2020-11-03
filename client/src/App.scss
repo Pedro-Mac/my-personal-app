@@ -5,4 +5,15 @@
   max-width: 55rem;
   margin: 0 auto;
   padding-bottom: 3rem;
+  position: relative;
 }
+
+// .App::after {
+//   content: '';
+//   width: 1px;
+//   display: block;
+//   position: absolute;
+//   top: 15vh;
+//   bottom: 50vh;
+//   left: 10%;
+// }

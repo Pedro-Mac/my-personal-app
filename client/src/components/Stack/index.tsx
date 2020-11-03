@@ -17,7 +17,7 @@ const Stack: React.FC = () => {
   }
   return (
     <section className="container-stack">
-      <h2 className="mb-5">const {"{ stack }"} = pedro;</h2>
+      <h2 className="mb-5">const {"{ skills }"} = pedro;</h2>
       <div className='container stack-card'>
         {stack === front ? <Frontend /> : <Backend />}
       </div>
