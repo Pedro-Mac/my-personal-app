@@ -1,22 +1,19 @@
-import React from 'react'
+import React from 'react';
 
 //components
 import Item from './../../Item';
 
 const Backend = () => {
+  const backEndItems = ['NodeJS', 'Express', 'MongoDB'];
   return (
     <>
-    <div className="row">
-      <Item columns={4} text="NodeJS"/>
-    </div>
-    <div className="row">
-      <Item columns={4} text="Express"/>
-    </div>
-    <div className="row">
-      <Item columns={4} text="MongoDB"/>
-    </div>
-  </>
-  )
-}
+      {backEndItems.map(item => (
+        <div className="row">
+          <Item columns={4} text={item} />
+        </div>
+      ))}
+    </>
+  );
+};
 
 export default Backend;

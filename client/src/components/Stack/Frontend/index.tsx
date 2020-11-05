@@ -1,26 +1,39 @@
-import React from 'react'
+import React from 'react';
 
-import Item from './../../Item'
+import Item from './../../Item';
 
 const Frontend = () => {
+  const frontendItems = [
+    'React',
+    'Bootstrap',
+    'Rest APIs',
+    'Redux',
+    'Sass',
+    'Handlebars',
+    'Typescript',
+    'Styled Components'
+  ];
+
+  for (let i: number = 0; i < frontendItems.length; i++) {}
+  const groupItems = (itemsList: string[]): string[][] => {
+    const finalArray: string[][] = [];
+    for (let i: number = 0; i < itemsList.length; i += 3) {
+      finalArray.push(itemsList.slice(i, i + 3));
+    }
+    return finalArray;
+  };
+
   return (
     <>
-      <div className="row">
-        <Item columns={4} text="React"/>
-        <Item columns={4} text="Bootstrap"/>
-        <Item columns={4} text="Rest APIs"/>
-      </div>
-      <div className="row">
-        <Item columns={4} text="Redux"/>
-        <Item columns={4} text="Sass"/>
-        <Item columns={4} text="Handlebars"/>
-      </div>
-      <div className="row">
-        <Item columns={4} text="Typescript"/>
-        <Item text="Styled Components"/>
-      </div>
+      {groupItems(frontendItems).map(itemGroup => (
+        <div className="row">
+          {itemGroup.map(item => (
+            <Item columns={item === 'Styled Components' ? 0 : 4} text={item} />
+          ))}
+        </div>
+      ))}
     </>
-  )
-}
+  );
+};
 
 export default Frontend;
