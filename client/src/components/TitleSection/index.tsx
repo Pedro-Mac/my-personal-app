@@ -1,16 +1,16 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react';
 
-import './styles.scss'
-
-type pedroInfo = 'stack' | 'passion' | 'hobbie';
+import './styles.scss';
 
 const TitleSection: React.FC = () => {
-  const [pedroInfo, setPedroInfo] = useState<string>('');
+  const [currentPedroInfo, setCurrentPedroInfo] = useState<string>('');
   const [activeTab, setActiveTab] = useState<string>('');
 
-  const handleInfoDisplayed = (info: pedroInfo) => {
+  const pedroInfoList = ['stack', 'passion', 'hobbie'];
+
+  const handleInfoDisplayed = (info: string) => {
     let description: string = '';
-    switch(info){
+    switch (info) {
       case 'stack':
         description = 'a fullstack developer';
         break;
@@ -23,27 +23,38 @@ const TitleSection: React.FC = () => {
       default:
         description = '';
     }
-    setActiveTab(()=>info);
-    setPedroInfo(()=> description);
-  }
+    setActiveTab(() => info);
+    setCurrentPedroInfo(() => description);
+  };
   return (
     <section>
       <div className="container-title">
-        <h1 className="text-left" >Hi, I am</h1>
-        <h2 className="text-left" >{pedroInfo ? `'${pedroInfo}'` : "'Pedro'"}</h2>
+        <h1 className="text-left">Hi, I am</h1>
+        <h2 className="text-left">
+          {currentPedroInfo ? `'${currentPedroInfo}'` : "'Pedro'"}
+        </h2>
       </div>
 
-      <img className="mt-4 mb-5" src="./assets/images/coding-icon.svg" alt="coding"/>
+      <img
+        className="mt-4 mb-5"
+        src="./assets/images/coding-icon.svg"
+        alt="coding"
+      />
 
       <div className="container-title-handlers mt-5">
         <ul className="d-flex flex-row justify-content-between list-group">
-          <li style={{color: activeTab === 'stack' ? '#FCA311' : ''}} onClick={()=> handleInfoDisplayed('stack')}>pedro.stack</li>
-          <li style={{color: activeTab === 'passion' ? '#FCA311' : ''}} onClick={()=> handleInfoDisplayed('passion')}>pedro.passion</li>
-          <li style={{color: activeTab === 'hobbie' ? '#FCA311' : ''}} onClick={()=> handleInfoDisplayed('hobbie')}>pedro.hobbie</li>
+          {pedroInfoList.map(value => (
+            <li
+              style={{ color: activeTab === value ? '#FCA311' : '' }}
+              onClick={() => handleInfoDisplayed(value)}
+            >
+              pedro.{value}
+            </li>
+          ))}
         </ul>
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default TitleSection;

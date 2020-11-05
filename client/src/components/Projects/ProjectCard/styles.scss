@@ -1,0 +1,15 @@
+@import './../../../assets/master';
+
+.decoration-circle {
+  background-color: $secondaryColor;
+  position: absolute;
+  border-radius: 50%;
+  width: 5rem;
+  height: 5rem;
+  bottom: 0rem;
+  transition: all 0.5s ease;
+}
+
+.decoration-circle:hover {
+  background-color: $secondaryColor;
+}
