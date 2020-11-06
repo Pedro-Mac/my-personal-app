@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 //styles
-import './styles.scss';
+import './styles/main.scss';
 
 //components
 import Frontend from './Frontend';
@@ -26,7 +26,8 @@ const Stack: React.FC = () => {
         {stack === front ? <Frontend /> : <Backend />}
         <span
           className={
-            'circle-decorator' + (activateDecorator ? ' is-active' : '')
+            'circle-decorator' +
+            (activateDecorator ? ' is-active' : ' is-inactive')
           }
         ></span>
       </div>

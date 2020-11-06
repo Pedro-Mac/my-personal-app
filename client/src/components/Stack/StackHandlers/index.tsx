@@ -18,12 +18,17 @@ const StackHandler: React.FC<toProps> = ({
 }) => {
   const stacksList: string[] = [frontEnd, backEnd];
 
+  const handleClickStates = (item: string) => {
+    handler(item);
+    decoratorSetter(false);
+  };
+
   return (
     <div className="d-flex justify-content-between pl-0 mt-5">
       {stacksList.map(stackItem => (
         <h3
           className={'px-4' + (stackState === stackItem ? ' is-selected' : '')}
-          onClick={() => handler(stackItem)}
+          onClick={() => handleClickStates(stackItem)}
           onMouseEnter={
             stackState !== stackItem ? () => decoratorSetter(true) : undefined
           }

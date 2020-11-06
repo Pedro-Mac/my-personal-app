@@ -1,0 +1,62 @@
+@import './../../../assets//master';
+
+.circle-decorator {
+  height: 100px;
+  width: 100px;
+  position: absolute;
+  background-color: $secondaryColor;
+  right: 0;
+  border-radius: 50%;
+  z-index: -1;
+  transform: translateX(35px);
+  transition: transform 0.1s ease-in;
+}
+.is-active {
+  animation: circleActivateAnimation 0.3s 1 ease-in forwards;
+}
+
+.is-inactive {
+  animation: circleDeactivateAnimation 0.5s 1;
+}
+
+.row {
+  margin-top: 0.25rem;
+  animation: rowFadeIn 0.75s 1;
+}
+
+@keyframes circleDeactivateAnimation {
+  0% {
+    background-color: $primaryColor;
+  }
+  100% {
+    background-color: $secondaryColor;
+  }
+}
+
+@keyframes circleActivateAnimation {
+  0% {
+    transform: translateX(35px);
+  }
+  50% {
+    transform: translateX(0);
+    background-color: $secondaryColor;
+  }
+  51% {
+    background-color: $primaryColor;
+  }
+  100% {
+    background-color: $primaryColor;
+    transform: translateX(35px);
+  }
+}
+
+@keyframes rowFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -19,9 +19,9 @@ const ProjectCard: React.FC<Props> = ({ projectName, projectLink }) => {
 
   const handleFlipping = (): void => {
     if (isFlipped) {
-      setTimeout(() => setIsFlipped(!isFlipped), 300);
+      setTimeout(() => setIsFlipped(false), 300);
     } else {
-      setIsFlipped(!isFlipped);
+      setIsFlipped(true);
     }
     setDecorationIsActive(!decorationIsActive);
   };
