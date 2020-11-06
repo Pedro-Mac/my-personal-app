@@ -6,13 +6,15 @@ import './styles.scss';
 //components
 import Frontend from './Frontend';
 import Backend from './Backend';
-import StackHandler from './StackHandler';
+import StackHandlers from './StackHandlers';
 
 const Stack: React.FC = () => {
   const front: string = 'front';
   const back: string = 'back';
-
+  //state
   const [stack, setStack] = useState<string>(front);
+  const [activateDecorator, setActivateDecorator] = useState<boolean>(false);
+
   const handleStackCard = (stack: string) => {
     setStack(() => stack);
   };
@@ -22,13 +24,18 @@ const Stack: React.FC = () => {
       <h2 className="mb-5">const {'{ skills }'} = pedro;</h2>
       <div className="container stack-card d-flex flex-column justify-content-center">
         {stack === front ? <Frontend /> : <Backend />}
-        <span className="circle-decorator"></span>
+        <span
+          className={
+            'circle-decorator' + (activateDecorator ? ' is-active' : '')
+          }
+        ></span>
       </div>
-      <StackHandler
+      <StackHandlers
         handler={handleStackCard}
-        stack={stack}
+        stackState={stack}
         frontEnd={front}
         backEnd={back}
+        decoratorSetter={setActivateDecorator}
       />
     </section>
   );

@@ -3,7 +3,7 @@ import React from 'react';
 import Item from './../../Item';
 
 const Frontend = () => {
-  const frontendItems = [
+  const frontendItems: string[] = [
     'React',
     'Bootstrap',
     'Rest APIs',
